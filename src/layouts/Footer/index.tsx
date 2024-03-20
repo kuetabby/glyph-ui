@@ -152,8 +152,8 @@ const AppFooter: React.FC<Props> = () => {
           </div>
 
           <div className="w-full flex items-center text-sm md:text-base text-center !font-normal text-slate-500">
-            <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />
-            2024 Glyph AI - All Right Reserved
+            {/* <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} /> */}
+            © 2024 Glyph AI - All Right Reserved
           </div>
           {/* <Link href={socialsLink.email} className="w-full lg:w-1/5 text-right">
             <div className="w-full text-sm text-center text-gray-300 hover:text-white !font-bold">
