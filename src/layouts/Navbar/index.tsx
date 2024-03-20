@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import clsx from "clsx";
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 import PageTabs from "../PageTabs";
 import { NavbarDrawer } from "./Drawer";
@@ -126,7 +127,11 @@ const Navbar: React.FC<Props> = () => {
                   : "animate-slideInBottomBasic"
               }`}
             >
-              <MenuOutlined
+              {/* <MenuOutlined
+                className="font-extrabold text-primary"
+                style={{ fontSize: "1.5em" }}
+              /> */}
+              <HamburgerIcon
                 className="font-extrabold text-primary"
                 style={{ fontSize: "1.5em" }}
               />
