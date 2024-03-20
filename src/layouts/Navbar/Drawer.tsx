@@ -135,7 +135,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         />
         <DrawerHeader className={`bg-dark-main h-24 ${barlow.className}`}>
           <Link href="/" className={`logo-container text-white h-full`}>
-            <div className="font-extrabold text-2xl">RENON AI</div>
+            <div className="font-extrabold text-2xl">GLYPH AI</div>
           </Link>
         </DrawerHeader>
 
