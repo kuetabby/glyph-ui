@@ -16,7 +16,7 @@ module.exports = {
 
     extend: {
       textColor: {
-        primary: "#FF1BC6",
+        primary: "#19FFAC",
         secondary: "#385AD3",
 
         "nav-title": "#98FF98",
@@ -26,11 +26,11 @@ module.exports = {
         "light-main": "#D2D6EE",
       },
       fill: {
-        primary: "#FF1BC6",
+        primary: "#19FFAC",
         secondary: "#385AD3",
       },
       backgroundColor: {
-        primary: "#FF1BC6",
+        primary: "#19FFAC",
         secondary: "#385AD3",
 
         "dark-main": "#151515",
@@ -72,7 +72,7 @@ module.exports = {
           "linear-gradient(to right, #151515, #131823, rgb(19, 24, 35))",
       }),
       borderColor: {
-        primary: "#FF1BC6",
+        primary: "#19FFAC",
         secondary: "#385AD3",
 
         "dark-main": "#8F8686",

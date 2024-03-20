@@ -177,10 +177,12 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
             <Button
               size={"lg"}
               className="nav-tg-btn"
+              variant="outline"
+              colorScheme="whiteAlpha"
               // colorScheme="messenger"
               // leftIcon={<DollarOutlined style={{ fontSize: "1.5em" }} />}
             >
-              Whitepaper
+              Glyph AI
             </Button>
           </Link>
         </DrawerFooter>

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // import { ReactTyped } from "react-typed";
@@ -12,11 +12,11 @@ import YinLoader from "@/components/Loader/Custom";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
 
-import { contractAddress, findUsLink, socialsLink } from "@/constants/links";
+import { contractAddress, socialsLink } from "@/constants/links";
 import {
   barlow,
   barlowBold,
-  syne,
+  // syne,
   syneBold,
   syneExtraBold,
 } from "@/utils/font";
@@ -28,9 +28,9 @@ import { TelegramHeaderIcon, TwitterHeaderIcon } from "@/utils/Icon/socials";
 
 // import BannerApp from "@/assets/banner-nav.png";
 
-import RedTokenomic from "@/assets/tokenomic-red.png";
-import BlueTokenomic from "@/assets/tokenomic-blue.png";
-import GreenTokenomic from "@/assets/tokenomic-green.png";
+// import RedTokenomic from "@/assets/tokenomic-red.png";
+// import BlueTokenomic from "@/assets/tokenomic-blue.png";
+// import GreenTokenomic from "@/assets/tokenomic-green.png";
 
 import HeaderLogo from "@/assets/header-image.png";
 import AboutLogo from "@/assets/about.png";
@@ -70,21 +70,21 @@ import "./style.css";
 
 interface Props {}
 
-const introVidUrl =
-  "https://res.cloudinary.com/dwppcshmi/video/upload/f_auto:video,q_auto/v1/rabbit_images/y1tkrs3vpz3mvpocct6p";
+// const introVidUrl =
+//   "https://res.cloudinary.com/dwppcshmi/video/upload/f_auto:video,q_auto/v1/rabbit_images/y1tkrs3vpz3mvpocct6p";
 
 const Home: React.FC<Props> = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
 
-  const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
-  const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
+  // const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
+  // const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
   const [isAboutVisible, setIsAboutVisible] = useState(false);
-  const [isTokensVisible, setIsTokensVisible] = useState(false);
+  // const [isTokensVisible, setIsTokensVisible] = useState(false);
 
-  const welcomeRef = useRef<HTMLDivElement | null>(null);
-  const featuresRef = useRef<HTMLDivElement | null>(null);
-  const aboutRef = useRef<HTMLDivElement | null>(null);
-  const tokensRef = useRef<HTMLDivElement | null>(null);
+  // const welcomeRef = useRef<HTMLDivElement | null>(null);
+  // const featuresRef = useRef<HTMLDivElement | null>(null);
+  // const aboutRef = useRef<HTMLDivElement | null>(null);
+  // const tokensRef = useRef<HTMLDivElement | null>(null);
 
   const isMounted = useIsMounted();
   // const [copyContent] = useCopyText();
@@ -173,27 +173,38 @@ const Home: React.FC<Props> = () => {
                 YOUR AUDIO OR VIDEO TO TEXT
               </h2>
               <div className={`text-[#FFFFFFCC] ${barlow.className} text-base`}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                Pioneering Artificial Intelligence (AI) platform designed to
+                transform the way we create and consume digital content
               </div>
 
               <div className="flex flex-wrap justify-center sm:justify-normal gap-4 mt-4">
-                <Button
-                  variant="outline"
-                  className="text-white rounded-none"
-                  leftIcon={<TelegramHeaderIcon />}
+                <Link
+                  href={socialsLink.telegram}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Telegram
-                </Button>
+                  <Button
+                    variant="outline"
+                    className="text-white hover:text-primary rounded-none bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent"
+                    leftIcon={<TelegramHeaderIcon />}
+                  >
+                    Telegram
+                  </Button>
+                </Link>
 
-                <Button
-                  variant="outline"
-                  className="text-white rounded-none"
-                  leftIcon={<TwitterHeaderIcon />}
+                <Link
+                  href={socialsLink.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Twitter
-                </Button>
+                  <Button
+                    variant="outline"
+                    className="text-white hover:text-primary rounded-none bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent"
+                    leftIcon={<TwitterHeaderIcon />}
+                  >
+                    Twitter
+                  </Button>
+                </Link>
               </div>
             </div>
             {/* <div
@@ -241,8 +252,9 @@ const Home: React.FC<Props> = () => {
               </div>
 
               <div className={`${barlow.className} text-[#DEDEDE]`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
-                nulla odio nascetur fusce.
+                This feature harnesses sophisticated AI to understand and
+                visualize the essence of the text, transforming it into
+                engaging, animated visuals
               </div>
             </div>
           </div>
@@ -276,8 +288,9 @@ const Home: React.FC<Props> = () => {
               </div>
 
               <div className={`${barlow.className} text-[#DEDEDE]`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
-                nulla odio nascetur fusce.
+                Innovative feature that seamlessly transforms written text into
+                natural-sounding spoken words, leveraging the latest
+                advancements in AI and speech synthesis technology
               </div>
             </div>
           </div>
@@ -311,8 +324,9 @@ const Home: React.FC<Props> = () => {
               </div>
 
               <div className={`${barlow.className} text-[#DEDEDE]`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
-                nulla odio nascetur fusce.
+                Innovative feature that leverages advanced AI to interpret and
+                visualize text, creating engaging videos complete with
+                animations, images, and narration
               </div>
             </div>
           </div>
@@ -337,21 +351,29 @@ const Home: React.FC<Props> = () => {
 
             <div className="w-full xs:w-2/3 sm:w-1/2 lg:w-2/5 h-full mt-14 mx-auto">
               <div className={`w-full text-[#DEDEDE] ${barlow.className}`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
-                nulla odio nascetur fusce. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Pretium nulla odio nascetur fusce.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
-                nulla odio nascetur fusce.
+                By leveraging advanced AI algorithms, Glyph AI has introduced a
+                series of revolutionary tools that convert simple text inputs
+                into various multimedia formats. The platform's Text to GIF
+                feature allows users to generate custom animated GIFs by merely
+                typing out a description, making it a fantastic tool for social
+                media enthusiasts and digital marketers seeking to add a visual
+                punch to their content. In addition to this, Glyph AI's Text to
+                Audio capability enables the conversion of written text into
+                natural-sounding audio, which is immensely beneficial for
+                creating podcasts, audiobooks, or providing accessibility
+                features for those with visual impairments
               </div>
             </div>
 
             <div className="w-full xs:w-2/3 sm:w-1/2 lg:w-2/5 h-full my-14 mx-auto">
               <div className={`w-full text-[#DEDEDE] ${barlow.className}`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
-                nulla odio nascetur fusce. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Pretium nulla odio nascetur fusce.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
-                nulla odio nascetur fusce.
+                Lastly, the Text to Video feature is particularly
+                groundbreaking, as it allows users to create engaging video
+                content from textual descriptions, drastically reducing the time
+                and resources typically required for video production. This
+                makes Glyph AI not just a tool, but a transformative force in
+                digital media, enabling creators to bring their ideas to life
+                with unprecedented ease and speed
               </div>
             </div>
 
@@ -374,7 +396,7 @@ const Home: React.FC<Props> = () => {
               />
 
               <Link
-                href={socialsLink.whitepaper}
+                href={socialsLink.bot}
                 rel="noopener noreferrer"
                 target="_blank"
                 className="mx-auto mt-10"
@@ -383,7 +405,7 @@ const Home: React.FC<Props> = () => {
                   colorScheme="whiteAlpha"
                   className="w-auto my-4 hover:text-primary"
                 >
-                  Read Our Docs
+                  Glpyh AI
                 </Button>
               </Link>
             </div>

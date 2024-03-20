@@ -104,16 +104,18 @@ const Navbar: React.FC<Props> = () => {
           {/* <div className="w-1/2 lg:w-1/4 lg:flex justify-end font-semibold"> */}
           <div className="w-1/2 sm:w-1/4 xl:w-1/5  hidden lg:flex justify-center items-center">
             <Link
-              href={socialsLink.telegram}
+              href={socialsLink.bot}
               target="_blank"
               rel="noopener noreferrer"
               className="w-auto mr-2 sm:mr-0"
             >
               <Button
-                className="nav-tg-btn"
+                className="nav-tg-btn text-primary"
+                variant="ghost"
+                colorScheme="whiteAlpha"
                 // leftIcon={<DollarOutlined style={{ fontSize: "1.5em" }} />}
               >
-                Whitepaper
+                Glpyh AI
               </Button>
             </Link>
           </div>

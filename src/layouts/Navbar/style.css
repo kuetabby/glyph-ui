@@ -3,18 +3,21 @@
   @apply !px-0 w-full bg-transparent absolute pb-3;
   /* @apply fixed top-0 z-50; */
   z-index: 50;
+
+  @apply border-r border-l border-b border-white;
 }
 
 .navbar-fixed {
-  @apply w-full fixed top-0 bg-dark-main;
+  @apply w-full fixed top-0 bg-[#0A0F21];
   z-index: 1000;
+
+  @apply border-r border-l border-b border-white;
 }
 
 .navbar,
 .navbar-scroll {
   @apply max-w-screen-xl w-full h-full m-auto;
   @apply flex flex-wrap justify-between items-center;
-  @apply border-r border-l border-b border-white;
 
   transition: linear;
   transition-delay: 0.2s;
@@ -53,17 +56,18 @@
 }
 
 .nav-tg-btn {
-  @apply w-full text-white bg-renon-primary hover:bg-renon-secondary active:bg-renon-secondary focus:bg-renon-secondary lg:p-6;
+  /* @apply w-full text-white bg-renon-primary hover:bg-renon-secondary active:bg-renon-secondary focus:bg-renon-secondary lg:p-6; */
+  @apply w-full text-gray-400 hover:text-primary lg:p-6;
   transition: transform 0.3s ease;
 }
 
-.nav-tg-btn:hover {
+/* .nav-tg-btn:hover {
   transform: translateY(-5px);
-}
+} */
 
 .nav-menu-btn {
-  @apply bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent text-white;
-  transition: 0.3s ease-in-out;
+  @apply bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent text-white mr-2;
+  /* transition: 0.3s ease-in-out; */
 }
 
 @media (min-width: theme("screens.md")) {

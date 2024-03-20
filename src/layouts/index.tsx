@@ -1,7 +1,7 @@
 "use client";
 import React, { PropsWithChildren, useEffect, useState } from "react";
 // import { useDisclosure, Button } from "@chakra-ui/react";
-// import Image from "next/image";
+import Image from "next/image";
 import clsx from "clsx";
 // import { ArrowUpOutlined } from "@ant-design/icons";
 
@@ -10,8 +10,8 @@ import Footer from "./Footer";
 
 import Provider from "@/library/Provider";
 
-import { barlow } from "@/utils/font";
-// import AppBackground from "@/assets/background.png";
+// import { barlow } from "@/utils/font";
+import AppBackground from "@/assets/background.png";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
 
@@ -67,14 +67,14 @@ const BaseLayout: React.FC<Props> = ({ children }) => {
     <Provider>
       <Navbar />
       <main className={clsx("base-main-container")}>
-        {/* {isMounted && isLoaded && (
+        {isMounted && isLoaded && (
           <Image
             src={AppBackground}
             alt="roadmap"
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
           />
-        )} */}
+        )}
         {children}
 
         {/* <div
