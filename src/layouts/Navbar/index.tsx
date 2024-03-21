@@ -85,12 +85,13 @@ const Navbar: React.FC<Props> = () => {
         )}
       >
         <div className={clsx(isScroll ? "navbar-scroll" : "navbar")}>
+          {/* <div className="w-2/3 xl:w-1/5 flex items-center justify-center relative"> */}
           <div className="w-1/2 sm:w-1/4 xl:w-1/5 flex items-center justify-center relative">
             <Link href="/" className={`logo-container text-white`}>
               <Image
                 src={AppBannerNav}
                 alt="banner-nav-logo"
-                className={`w-full h-16 sm:h-20 mt-2 object-contain object-center`}
+                className={`w-full h-16 sm:h-20 object-contain object-left ml-2 sm:ml-0`}
               />
             </Link>
           </div>
@@ -115,12 +116,12 @@ const Navbar: React.FC<Props> = () => {
                 colorScheme="whiteAlpha"
                 // leftIcon={<DollarOutlined style={{ fontSize: "1.5em" }} />}
               >
-                Glpyh AI
+                Start Now
               </Button>
             </Link>
           </div>
 
-          <div className="w-auto text-end sm:ml-4 lg:hidden">
+          <div className="w-auto sm:w-[10%] text-end lg:ml-4 lg:hidden">
             <Button
               onClick={onToggleDrawer}
               className={`nav-menu-btn border border-solid border-primary ${

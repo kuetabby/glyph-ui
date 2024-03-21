@@ -72,7 +72,7 @@ export const TwitterIcon = (props: any) => (
     >
       <path
         d="M23.6268 0H28.227L18.1769 11.4866L30 27.1172H20.7426L13.4919 17.6373L5.19538 27.1172H0.592407L11.342 14.831L0 0H9.49242L16.0464 8.665L23.6268 0ZM22.0122 24.3638H24.5613L8.10736 2.60882H5.37199L22.0122 24.3638Z"
-        // fill="#FFF"
+        // fill="white"
       />
     </svg>
   </Icon>
@@ -101,7 +101,7 @@ export const TelegramHeaderIcon = (props: any) => (
       width="28"
       height="28"
       viewBox="0 0 28 28"
-      fill="none"
+      // fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >

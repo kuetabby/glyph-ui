@@ -62,19 +62,14 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         pathname: `#feature`,
         name: "Features",
       },
-      // {
-      //   href: "#tokenomic",
-      //   pathname: `#tokenomic`,
-      //   name: "Tokenomics",
-      // },
       {
-        href: "/",
-        pathname: `/`,
+        href: `${findUsLink.uniswap}`,
+        pathname: `/uniswap`,
         name: "Buy",
       },
       {
-        href: "/",
-        pathname: `/`,
+        href: `${findUsLink.dextools}`,
+        pathname: `/dextools`,
         name: "Chart",
       },
     ];
@@ -182,7 +177,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
               // colorScheme="messenger"
               // leftIcon={<DollarOutlined style={{ fontSize: "1.5em" }} />}
             >
-              Glyph AI
+              Start Now
             </Button>
           </Link>
         </DrawerFooter>

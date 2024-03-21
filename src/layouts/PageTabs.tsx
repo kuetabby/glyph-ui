@@ -11,6 +11,7 @@ import useHash from "@/hooks/useHashname";
 import { getHash } from "@/utils/hash";
 
 import "./style.css";
+import { findUsLink } from "@/constants/links";
 
 interface Props {
   containterClass: string;
@@ -41,19 +42,14 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
         pathname: `#feature`,
         name: "Features",
       },
-      // {
-      //   href: "#tokenomic",
-      //   pathname: `#tokenomic`,
-      //   name: "Tokenomics",
-      // },
       {
-        href: "/",
-        pathname: `/`,
+        href: `${findUsLink.uniswap}`,
+        pathname: `/uniswap`,
         name: "Buy",
       },
       {
-        href: "/",
-        pathname: `/`,
+        href: `${findUsLink.dextools}`,
+        pathname: `/dextools`,
         name: "Chart",
       },
     ];

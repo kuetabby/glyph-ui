@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // import { ReactTyped } from "react-typed";
@@ -20,7 +20,7 @@ import {
   syneBold,
   syneExtraBold,
 } from "@/utils/font";
-import { TelegramHeaderIcon, TwitterHeaderIcon } from "@/utils/Icon/socials";
+import { TelegramHeaderIcon, TwitterIcon } from "@/utils/Icon/socials";
 // import { ecosystemList } from "./constants/ecosystem";
 // import { roadmapList } from "./constants/roadmap";
 
@@ -74,7 +74,7 @@ interface Props {}
 //   "https://res.cloudinary.com/dwppcshmi/video/upload/f_auto:video,q_auto/v1/rabbit_images/y1tkrs3vpz3mvpocct6p";
 
 const Home: React.FC<Props> = () => {
-  // const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   // const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
   // const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
@@ -89,15 +89,15 @@ const Home: React.FC<Props> = () => {
   const isMounted = useIsMounted();
   // const [copyContent] = useCopyText();
 
-  // useEffect(() => {
-  //   if (isMounted) {
-  //     const timeOut = setTimeout(() => {
-  //       setIsLoaded(true);
-  //     }, 2000);
+  useEffect(() => {
+    if (isMounted) {
+      const timeOut = setTimeout(() => {
+        setIsLoaded(true);
+      }, 2000);
 
-  //     return () => clearTimeout(timeOut);
-  //   }
-  // }, [isMounted, isLoaded]);
+      return () => clearTimeout(timeOut);
+    }
+  }, [isMounted, isLoaded]);
 
   // useEffect(() => {
   //   if (isLoaded) {
@@ -143,7 +143,7 @@ const Home: React.FC<Props> = () => {
   //   }
   // }, [isLoaded]);
 
-  if (isMounted) {
+  if (isMounted && isLoaded) {
     return (
       <div className="homepage-container">
         {/* <div className="h-20" /> */}
@@ -153,17 +153,9 @@ const Home: React.FC<Props> = () => {
         />
         <div className="welcome-container">
           <div className="welcome-wrapper">
-            <div className="w-full sm:w-[47.5%] h-[400px] sm:h-full xl:h-[500px] my-auto">
-              <Image
-                src={HeaderLogo}
-                alt="header"
-                className="w-full h-full lg:object-contain"
-              />
-            </div>
-
-            <div className="w-full sm:w-1/2 text-center sm:text-left">
+            <div className="w-full md:w-1/2 md:hidden text-center">
               <h1
-                className={`${syneBold.className} !font-bold text-4xl sm:text-5xl lg:text-7xl`}
+                className={`${syneBold.className} !font-bold text-4xl xs:text-5xl sm:text-6xl`}
               >
                 GENERATE
               </h1>
@@ -172,12 +164,35 @@ const Home: React.FC<Props> = () => {
               >
                 YOUR AUDIO OR VIDEO TO TEXT
               </h2>
-              <div className={`text-[#FFFFFFCC] ${barlow.className} text-base`}>
+            </div>
+
+            <div className="w-full sm:w-4/5 md:w-[47.5%] h-[400px] sm:h-full xl:h-[500px] m-auto">
+              <Image
+                src={HeaderLogo}
+                alt="header"
+                className="w-full h-full lg:object-contain"
+              />
+            </div>
+
+            <div className="w-full md:w-1/2 text-center md:text-left">
+              <h1
+                className={`${syneBold.className} hidden md:block !font-bold text-4xl sm:text-5xl lg:text-7xl`}
+              >
+                GENERATE
+              </h1>
+              <h2
+                className={`${syneExtraBold.className} hidden md:block !font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-4 md:my-6`}
+              >
+                YOUR AUDIO OR VIDEO TO TEXT
+              </h2>
+              <div
+                className={`w-11/12 text-[#FFFFFFCC] ${barlow.className} text-base mx-auto md:mx-0`}
+              >
                 Pioneering Artificial Intelligence (AI) platform designed to
                 transform the way we create and consume digital content
               </div>
 
-              <div className="flex flex-wrap justify-center sm:justify-normal gap-4 mt-4">
+              <div className="flex flex-wrap justify-center md:justify-normal gap-4 mt-4">
                 <Link
                   href={socialsLink.telegram}
                   target="_blank"
@@ -185,8 +200,10 @@ const Home: React.FC<Props> = () => {
                 >
                   <Button
                     variant="outline"
-                    className="text-white hover:text-primary rounded-none bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent"
-                    leftIcon={<TelegramHeaderIcon />}
+                    className="socials-header"
+                    leftIcon={
+                      <TelegramHeaderIcon className="socials-headers-icon" />
+                    }
                   >
                     Telegram
                   </Button>
@@ -199,8 +216,8 @@ const Home: React.FC<Props> = () => {
                 >
                   <Button
                     variant="outline"
-                    className="text-white hover:text-primary rounded-none bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent"
-                    leftIcon={<TwitterHeaderIcon />}
+                    className="socials-header"
+                    leftIcon={<TwitterIcon className="socials-header-icon" />}
                   >
                     Twitter
                   </Button>
@@ -225,7 +242,7 @@ const Home: React.FC<Props> = () => {
         <div className="h-12 md:h-20" />
         <div id="feature" className="h-24 sm:h-28 relative z-30" />
         <div className="w-full md:w-11/12 flex flex-wrap justify-evenly items-center gap-y-8 mx-auto mt-8 relative z-30">
-          <div className="w-full sm:w-2/5 lg:w-[30%] h-[400px] bg-card border border-[#fff] rounded-2xl p-4 text-center relative">
+          <div className="w-11/12 sm:w-2/5 lg:w-[30%] h-[400px] bg-card border border-[#fff] rounded-2xl p-4 text-center relative">
             <div className="w-full h-full flex flex-wrap flex-col justify-evenly items-center relative">
               <div className="w-full relative z-50">
                 <div className="absolute top-[15px] right-[75px] xs:right-[100px] sm:right-[50px] lg:right-[60px] 2xl:right-[75px]">
@@ -259,7 +276,7 @@ const Home: React.FC<Props> = () => {
             </div>
           </div>
 
-          <div className="w-full sm:w-2/5 lg:w-[30%] h-[400px] bg-card border border-[#fff] rounded-2xl p-4 text-center relative">
+          <div className="w-11/12 sm:w-2/5 lg:w-[30%] h-[400px] bg-card border border-[#fff] rounded-2xl p-4 text-center relative">
             <div className="w-full h-full flex flex-wrap flex-col justify-evenly items-center relative">
               <div className="w-full relative z-50">
                 <div className="absolute top-[15px] right-[75px] xs:right-[100px] sm:right-[50px] lg:right-[60px] 2xl:right-[75px]">
@@ -295,7 +312,7 @@ const Home: React.FC<Props> = () => {
             </div>
           </div>
 
-          <div className="w-full sm:w-2/5 lg:w-[30%] h-[400px] bg-card border border-[#fff] rounded-2xl p-4 text-center relative">
+          <div className="w-11/12 sm:w-2/5 lg:w-[30%] h-[400px] bg-card border border-[#fff] rounded-2xl p-4 text-center relative">
             <div className="w-full h-full flex flex-wrap flex-col justify-evenly items-center relative">
               <div className="w-full relative z-50">
                 <div className="absolute top-[15px] right-[75px] xs:right-[100px] sm:right-[50px] lg:right-[60px] 2xl:right-[75px]">
@@ -405,7 +422,7 @@ const Home: React.FC<Props> = () => {
                   colorScheme="whiteAlpha"
                   className="w-auto my-4 hover:text-primary"
                 >
-                  Glpyh AI
+                  Start Now
                 </Button>
               </Link>
             </div>
