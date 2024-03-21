@@ -7,10 +7,10 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "Glyph AI -";
+const app_title = "Glyph AI - Generating";
 const app_name = "Glyph AI";
 const description =
-  "";
+  "Pioneering Artificial Intelligence (AI) platform designed to transform the way we create and consume digital content";
 
 export const metadata: Metadata = {
   title: app_title,
