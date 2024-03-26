@@ -1,5 +1,5 @@
-export const contractAddress = "-";
-export const pairAddress = "";
+export const contractAddress = "0x00237Cf4CeB478EEd216E00C2B85A5e40c9e4951";
+export const pairAddress = "0x8fBB9262251daBB9268CE5Dbb88d121a857689db";
 
 export const socialsLink = {
   whitepaper: "https://glyph-ai-official.gitbook.io/glyphai",
@@ -7,7 +7,7 @@ export const socialsLink = {
   telegram: "https://t.me/GlyphAI",
   medium: "https://medium.com/@glyphofficial",
   email: "mailto:glyphofficial@glyph-ai.io",
-  bot: "https://t.me/",
+  bot: "https://t.me/GlyphAIBot",
 };
 
 export const findUsLink = {
