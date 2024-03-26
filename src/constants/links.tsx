@@ -1,12 +1,12 @@
-export const contractAddress = "-";
+export const contractAddress = "";
 export const pairAddress = "";
 
 export const socialsLink = {
   whitepaper: "/",
-  twitter: "https://x.com/",
+  twitter: "https://x.com/GlyphAIOfficial",
   telegram: "https://t.me/",
-  medium: "https://medium.com/@",
-  email: "mailto:",
+  medium: "https://medium.com/@glyphofficial",
+  email: "mailto:glyphofficial@glyph-ai.io",
   bot: "https://t.me/",
 };
 
