@@ -186,7 +186,7 @@ const Home: React.FC<Props> = () => {
               <h2
                 className={`${syneExtraBold.className} hidden md:block !font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-4 md:my-6`}
               >
-                YOUR AUDIO OR VIDEO TO TEXT
+                YOUR TEXT TO AUDIO OR VIDEO
               </h2>
               <div
                 className={`w-11/12 text-[#FFFFFFCC] ${barlow.className} text-base mx-auto md:mx-0`}
