@@ -12,7 +12,7 @@ export const useCopyText = () => {
       await navigator.clipboard.writeText(address);
       toast({
         title: `Copied!`,
-        // status: "success",
+        status: "success",
       });
       /* Resolved - text copied to clipboard successfully */
     } catch (err) {

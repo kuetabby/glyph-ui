@@ -11,6 +11,7 @@ import { Button, List, ListItem } from "@chakra-ui/react";
 import YinLoader from "@/components/Loader/Custom";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
+import { useCopyText } from "@/hooks/useCopyText";
 
 import { contractAddress, socialsLink } from "@/constants/links";
 import {
@@ -85,6 +86,8 @@ const Home: React.FC<Props> = () => {
   // const featuresRef = useRef<HTMLDivElement | null>(null);
   // const aboutRef = useRef<HTMLDivElement | null>(null);
   // const tokensRef = useRef<HTMLDivElement | null>(null);
+
+  const [copyContent] = useCopyText();
 
   const isMounted = useIsMounted();
   // const [copyContent] = useCopyText();
@@ -395,13 +398,18 @@ const Home: React.FC<Props> = () => {
             </div>
 
             <div className="w-full xs:w-2/3 sm:w-1/2 lg:w-2/5 h-full mx-auto">
-              <div>{contractAddress}</div>
-
               <List className={`${barlowBold.className}`}>
-                <ListItem>$GLYPH</ListItem>
-                <ListItem>Total Supply : 100M</ListItem>
+                <ListItem className="text-3xl">$GLYPH</ListItem>
+                <ListItem className="mt-4 mb-2">Contract Address</ListItem>
+                <ListItem
+                  className="text-base cursor-pointer"
+                  onClick={() => copyContent(contractAddress)}
+                >
+                  {contractAddress}
+                </ListItem>
+                {/* <ListItem>Total Supply : 100M</ListItem>
                 <ListItem>Tax : 5/5</ListItem>
-                <ListItem>Network : ETHEREUM </ListItem>
+                <ListItem>Network : ETHEREUM </ListItem> */}
               </List>
             </div>
 
