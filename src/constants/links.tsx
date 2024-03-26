@@ -2,7 +2,7 @@ export const contractAddress = "";
 export const pairAddress = "";
 
 export const socialsLink = {
-  whitepaper: "/",
+  whitepaper: "https://glyph-ai-official.gitbook.io/glyphai",
   twitter: "https://x.com/GlyphAIOfficial",
   telegram: "https://t.me/GlyphAI",
   medium: "https://medium.com/@glyphofficial",
