@@ -4,7 +4,7 @@ export const pairAddress = "-";
 export const socialsLink = {
   whitepaper: "https://glyph-ai-official.gitbook.io/glyphai",
   twitter: "https://x.com/GlyphAIOfficial",
-  telegram: "https://t.me/GlyphAI",
+  telegram: "/",
   medium: "https://medium.com/@glyphofficial",
   email: "mailto:glyphofficial@glyph-ai.io",
   bot: "https://t.me/GlyphAIBot",
