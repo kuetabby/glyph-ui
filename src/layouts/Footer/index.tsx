@@ -138,7 +138,7 @@ const AppFooter: React.FC<Props> = () => {
                 />
               </Link>
 
-              <Link
+              {/* <Link
                 href={socialsLink.whitepaper}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -147,7 +147,7 @@ const AppFooter: React.FC<Props> = () => {
                   style={{ fontSize: "1.1em" }}
                   className="cursor-pointer fill-slate-300 hover:fill-primary"
                 />
-              </Link>
+              </Link> */}
             </div>
           </div>
 

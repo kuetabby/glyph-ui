@@ -43,13 +43,13 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
         name: "Features",
       },
       {
-        href: `${findUsLink.uniswap}`,
-        pathname: `/uniswap`,
+        href: `${findUsLink.raydium}`,
+        pathname: `/raydium`,
         name: "Buy",
       },
       {
-        href: `${findUsLink.dextools}`,
-        pathname: `/dextools`,
+        href: `${findUsLink.dexscreener}`,
+        pathname: `/dexscreener`,
         name: "Chart",
       },
     ];
